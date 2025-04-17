@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrar Registros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Administrar Registros</h1>
+
+    <div class="button-container">
+      <button class="add-btn" onclick="mostrarFormulario()">➕ Añadir Registro</button>
+    </div>
+
+    <table id="tabla-registros">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="registro-body">
+        <tr id="fila-1">
+          <td>1</td>
+          <td>Mario Ruiz</td>
+          <td>mario@correo.com</td>
+          <td><button class="delete-btn" onclick="eliminarRegistro(1)">Eliminar</button></td>
+        </tr>
+        <tr id="fila-2">
+          <td>2</td>
+          <td>Lucía Flores</td>
+          <td>lucia@correo.com</td>
+          <td><button class="delete-btn" onclick="eliminarRegistro(2)">Eliminar</button></td>
+        </tr>
+        <tr id="fila-3">
+          <td>3</td>
+          <td>Carlos Díaz</td>
+          <td>carlos@correo.com</td>
+          <td><button class="delete-btn" onclick="eliminarRegistro(3)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="no-data hidden" id="no-data">No hay registros disponibles.</div>
+  </div>
+
+  <!-- Formulario emergente -->
+  <div class="modal hidden" id="modal-form">
+    <div class="modal-content">
+      <h2>Nuevo Registro</h2>
+      <input type="text" id="nombre" placeholder="Nombre completo" />
+      <input type="email" id="email" placeholder="Correo electrónico" />
+      <div class="modal-buttons">
+        <button class="add-btn" onclick="añadirRegistro()">Guardar</button>
+        <button class="cancel-btn" onclick="cerrarFormulario()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
