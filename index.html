@@ -28,19 +28,28 @@
           <td>1</td>
           <td>Mario Ruiz</td>
           <td>mario@correo.com</td>
-          <td><button class="delete-btn" onclick="eliminarRegistro(1)">Eliminar</button></td>
+          <td>
+            <button class="edit-btn" onclick="editarRegistro(1)">Editar</button>
+            <button class="delete-btn" onclick="eliminarRegistro(1)">Eliminar</button>
+          </td>
         </tr>
         <tr id="fila-2">
           <td>2</td>
           <td>Lucía Flores</td>
           <td>lucia@correo.com</td>
-          <td><button class="delete-btn" onclick="eliminarRegistro(2)">Eliminar</button></td>
+          <td>
+            <button class="edit-btn" onclick="editarRegistro(2)">Editar</button>
+            <button class="delete-btn" onclick="eliminarRegistro(2)">Eliminar</button>
+          </td>
         </tr>
         <tr id="fila-3">
           <td>3</td>
           <td>Carlos Díaz</td>
           <td>carlos@correo.com</td>
-          <td><button class="delete-btn" onclick="eliminarRegistro(3)">Eliminar</button></td>
+          <td>
+            <button class="edit-btn" onclick="editarRegistro(3)">Editar</button>
+            <button class="delete-btn" onclick="eliminarRegistro(3)">Eliminar</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -51,11 +60,11 @@
   <!-- Formulario emergente -->
   <div class="modal hidden" id="modal-form">
     <div class="modal-content">
-      <h2>Nuevo Registro</h2>
+      <h2 id="modal-title">Nuevo Registro</h2>
       <input type="text" id="nombre" placeholder="Nombre completo" />
       <input type="email" id="email" placeholder="Correo electrónico" />
       <div class="modal-buttons">
-        <button class="add-btn" onclick="añadirRegistro()">Guardar</button>
+        <button class="add-btn" onclick="guardarRegistro()">Guardar</button>
         <button class="cancel-btn" onclick="cerrarFormulario()">Cancelar</button>
       </div>
     </div>
